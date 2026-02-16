@@ -24,7 +24,10 @@ namespace AdminProgramWithCSharp
             _phonenumber = phonenumber;
             _houseAdres = houseAdres;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         }
