@@ -10,6 +10,7 @@ namespace AdminProgramWithCSharp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello, this is the first bit of code");
         }
     }
 }
