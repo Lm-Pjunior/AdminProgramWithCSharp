@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdminProgramWithCSharp
 {
-    internal class UserClass
+    public class UserClass
     {
         private string _name;
         private string _email;
@@ -17,19 +17,18 @@ namespace AdminProgramWithCSharp
 
         public UserClass(string name, string email, string password, int age, int phonenumber, string houseAdres)
         {
-            _name = name;
+            name = _name;
             _email = email;
             _password = password;
             _age = age;
             _phonenumber = phonenumber;
             _houseAdres = houseAdres;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+            _name = Console.ReadLine();
+        }
+        public void showUserStats()
+        {
+            Console.WriteLine($"Showing stats, name: {_name}, email: {_email}, password: {_password}, age: {_age}, phonenumber: {_phonenumber}," +
+                $" houseadress: {_houseAdres}.");
         }
 
     }
