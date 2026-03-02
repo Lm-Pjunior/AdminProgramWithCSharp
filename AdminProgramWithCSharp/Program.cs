@@ -16,6 +16,7 @@ namespace AdminProgramWithCSharp
         {
             Console.WriteLine("Hello, this is the first bit of code");
             UserClass User = new UserClass("name", "email", "password", 10, 10, "houseAdres");
+           // User.nameCharacter();
             User.showUserStats();
         }
     }
