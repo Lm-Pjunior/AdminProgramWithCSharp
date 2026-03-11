@@ -48,12 +48,15 @@ namespace AdminProgramWithCSharp
             _password = password;
             _phonenumber = phonenumber;
             _houseAdres = houseAdres;
+
             
         }
         public void showUserStats()
         {
-            Console.WriteLine($"Showing stats, name: {Name}, email: {_email}, password: {_password}, age: {_age}, phonenumber: {_phonenumber}," +
+            Console.WriteLine($"Showing stats, name: {Name}, email: {_email}, password: {_password}," +
+                $" age: {_age}, phonenumber: {_phonenumber}," +
                 $" houseadress: {_houseAdres}.");
+
         }
 
     }

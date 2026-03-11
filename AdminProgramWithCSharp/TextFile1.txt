@@ -1,0 +1,10 @@
+﻿This is merely planning voor some classes and things that they should do.
+User class (done)
+UserDatabase: this should have a save, store, delete, and chance function 
+Program: instantiation of the classes
+UserEdit: this might be usefull to use as a class inside a class together with a boolean that way I can basicly make it take over the new version inside the editclass D:
+DatabaseHandler: A sort of middle step before you reach the actual database aswell as a kind of sorting system, edits will be saved ehre and than in the main database?
+UserSearch: a class inside the DataBaseHandler class goes through the database
+
+
+adding users through the add funcction and the list and a for each loop would do well too I'd think.
