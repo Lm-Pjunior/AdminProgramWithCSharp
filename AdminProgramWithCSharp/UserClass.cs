@@ -27,7 +27,9 @@ namespace AdminProgramWithCSharp
             get {return _age;}
             set { if (_age >= 18) { Console.WriteLine("You're older than 18"); }
             _age = value;}
-        }
+        } //The get is done to get the private variable  and the set allowes
+          //for the possebility to chance this if i understod it correctly. the set can be public or private depending on whom
+          //you want to be able to chance it
         public UserClass(string Name, string email, string password, int Age, int phonenumber, string houseAdres)
         {
             _name = Console.ReadLine();
