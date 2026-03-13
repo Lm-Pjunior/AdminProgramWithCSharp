@@ -32,6 +32,8 @@ namespace AdminProgramWithCSharp
           //you want to be able to chance it
         public UserClass(string Name, string email, string password, int Age, int phonenumber, string houseAdres)
         {
+            //make a funcyion for typing stuff down that later be added to tnhe list
+
             _name = Console.ReadLine();
            
             bool repeat = true;
@@ -56,6 +58,12 @@ namespace AdminProgramWithCSharp
             Console.WriteLine($"Showing stats, name: {Name}, email: {_email}, password: {_password}," +
                 $" age: {_age}, phonenumber: {_phonenumber}," +
                 $" houseadress: {_houseAdres}.");
+
+
+        }
+
+        public void addUserToList()
+        {
 
         }
 
