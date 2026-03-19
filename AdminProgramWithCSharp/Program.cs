@@ -25,11 +25,15 @@ namespace AdminProgramWithCSharp
 
             while (on)
             {
-                Console.WriteLine("write down create to create a new character");
+                Console.WriteLine("write down create to create a new character or type show to show all");
                 insideSystem = Console.ReadLine();
                 if(insideSystem == "create") 
                 {
                     User.addUserToList();
+                }
+                if(insideSystem == "show")
+                {
+                    User.show();
                 }
             }
         }

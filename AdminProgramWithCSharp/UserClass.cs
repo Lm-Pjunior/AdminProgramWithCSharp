@@ -42,7 +42,7 @@ namespace AdminProgramWithCSharp
         public UserClass(string name, string email, int age, int phonenumber, string houseAdres)
         {
             //make a funcyion for typing stuff down that later be added to tnhe list
-            Console.WriteLine("Wrie down your name.");
+            Console.WriteLine("Write down your name.");
             _name = Console.ReadLine();
            
             bool repeat = true;
@@ -79,7 +79,7 @@ namespace AdminProgramWithCSharp
                 }
             }
             
-            
+            Console.WriteLine("Write down you house adress.");
             _houseAdres = Console.ReadLine();
 
             
@@ -89,6 +89,7 @@ namespace AdminProgramWithCSharp
 
         public void showUserStats()
         { //make a for each loop out of this.
+            
             Console.WriteLine($"Showing stats, name: {_name}, email: {_email}," +
                 $" age: {_age}, phonenumber: {_phonenumber}," +
                 $" houseadress: {_houseAdres}.");
