@@ -15,9 +15,9 @@ namespace AdminProgramWithCSharp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, this is the first bit of code");
-            UserClass User = new UserClass("name", "email", "password", 10, 10, "houseAdres");
+            UserDatabase User = new UserDatabase();
            // User.nameCharacter();
-            User.showUserStats();
+            
 
 
             string insideSystem;
@@ -25,8 +25,11 @@ namespace AdminProgramWithCSharp
 
             while (on)
             {
+                Console.WriteLine("write down create to create a new character");
                 insideSystem = Console.ReadLine();
-                if(insideSystem == "create") { 
+                if(insideSystem == "create") 
+                {
+                    User.addUserToList();
                 }
             }
         }

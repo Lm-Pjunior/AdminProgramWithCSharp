@@ -8,32 +8,41 @@ namespace AdminProgramWithCSharp
 {
     public class UserClass
     {
+        
+
         private string _name;
         private string _email;
-        private string _password;
         private int _age;
         private int _phonenumber;
         private string _houseAdres;
 
-        public string Name 
-        {
-            get {return _name;}
-
-            set {_name = value;}
-        }
+      
+        
 
         public int Age
         {
             get {return _age;}
             set { if (_age >= 18) { Console.WriteLine("You're older than 18"); }
             _age = value;}
-        } //The get is done to get the private variable  and the set allowes
+        }
+        
+        public string Email
+        {
+            get {return _email;}
+            set { if (_email.Contains ("@"))
+                {
+                    _email = value; 
+                } 
+                }
+            }
+
+        //The get is done to get the private variable  and the set allowes
           //for the possebility to chance this if i understod it correctly. the set can be public or private depending on whom
           //you want to be able to chance it
-        public UserClass(string Name, string email, string password, int Age, int phonenumber, string houseAdres)
+        public UserClass(string name, string email, int age, int phonenumber, string houseAdres)
         {
             //make a funcyion for typing stuff down that later be added to tnhe list
-
+            Console.WriteLine("Wrie down your name.");
             _name = Console.ReadLine();
            
             bool repeat = true;
@@ -46,26 +55,48 @@ namespace AdminProgramWithCSharp
                     repeat = false;
                 }
             }
-            _email = email;
-            _password = password;
-            _phonenumber = phonenumber;
-            _houseAdres = houseAdres;
+            bool repeat2 = true;
+            while (repeat2)
+            {
+                Console.WriteLine("Write your email down it must contain a @.");
+                _email = Console.ReadLine();
+                if (_email.Contains("@"))
+                {
+                    repeat2 = false;
+                }
+
+            }
+
+            bool repeat3 = true;
+
+            while (repeat3)
+            {
+                Console.WriteLine("Write down your phonenumber it must be numbers.");
+                bool intCheck2 = int.TryParse(Console.ReadLine(), out _phonenumber);
+                if (intCheck2)
+                {
+                    repeat3 = false;
+                }
+            }
+            
+            
+            _houseAdres = Console.ReadLine();
 
             
         }
+
+        
+
         public void showUserStats()
-        {
-            Console.WriteLine($"Showing stats, name: {Name}, email: {_email}, password: {_password}," +
+        { //make a for each loop out of this.
+            Console.WriteLine($"Showing stats, name: {_name}, email: {_email}," +
                 $" age: {_age}, phonenumber: {_phonenumber}," +
                 $" houseadress: {_houseAdres}.");
 
 
         }
 
-        public void addUserToList()
-        {
-
-        }
+      
 
     }
 }
