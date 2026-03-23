@@ -11,7 +11,7 @@ namespace AdminProgramWithCSharp
         //user IDs should be sorted within this class. 
 
         List<UserClass> _UserList = new List<UserClass>();
-
+        
 
 
 
@@ -27,8 +27,9 @@ namespace AdminProgramWithCSharp
         {
             foreach (var /* int & string */ user in _UserList)
             {
+                user.userCount();
                 user.showUserStats();
-            }
+            } //use a list.last and than do a + mayby that'll work
 
         }
 

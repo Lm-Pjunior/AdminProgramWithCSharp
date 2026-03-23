@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AdminProgramWithCSharp
@@ -16,8 +17,7 @@ namespace AdminProgramWithCSharp
         private int _phonenumber;
         private string _houseAdres;
 
-      
-        
+        private int _count;
 
         public int Age
         {
@@ -85,19 +85,23 @@ namespace AdminProgramWithCSharp
             
         }
 
-        
+       
 
         public void showUserStats()
         { //make a for each loop out of this.
+            int number = _count;
             
-            Console.WriteLine($"Showing stats, name: {_name}, email: {_email}," +
+            Console.WriteLine($"{number}: Showing stats, name: {_name}, email: {_email}," +
                 $" age: {_age}, phonenumber: {_phonenumber}," +
                 $" houseadress: {_houseAdres}.");
 
 
         }
 
-      
+        public void userCount()
+        {
+            _count++;
+        }
 
     }
 }
