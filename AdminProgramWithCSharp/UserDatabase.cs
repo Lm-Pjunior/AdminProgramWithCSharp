@@ -27,14 +27,23 @@ namespace AdminProgramWithCSharp
         {
             foreach (var /* int & string */ user in _UserList)
             {
+
                 user.userCount();
-                user.showUserStats();
+               user.showUserStats();
             } //use a list.last and than do a + mayby that'll work
 
         }
 
         public void removeUserOflist()
         {
+            //private bool Remove(T item) might be usefull
+
+            /*
+            Easiest way to remove from list by element's property value:
+            */
+            Console.WriteLine("Who do you want to remove?");
+             _UserList.RemoveAll(user => user.Name == Console.ReadLine());
+            
 
         }
     }

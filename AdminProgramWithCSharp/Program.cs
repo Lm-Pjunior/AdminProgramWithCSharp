@@ -25,16 +25,27 @@ namespace AdminProgramWithCSharp
 
             while (on)
             {
-                Console.WriteLine("write down create to create a new character or type show to show all");
+                Console.WriteLine("Would you like to 'create', 'remove', 'show' or 'shutdown'?");
                 insideSystem = Console.ReadLine();
                 if(insideSystem == "create") 
                 {
                     User.addUserToList();
+                    Console.Clear();
                 }
                 if(insideSystem == "show")
                 {
                     User.show();
                 }
+                if (insideSystem == "remove")
+                {
+                    User.removeUserOflist();
+                    Console.Clear();
+                }
+                if(insideSystem == "shutdown")
+                {
+                    on = false;
+                }
+
             }
         }
     }

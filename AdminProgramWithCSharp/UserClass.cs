@@ -19,6 +19,14 @@ namespace AdminProgramWithCSharp
 
         private int _count;
 
+            
+        
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        } 
+
         public int Age
         {
             get {return _age;}
@@ -100,6 +108,7 @@ namespace AdminProgramWithCSharp
 
         public void userCount()
         {
+
             _count++;
         }
 
