@@ -44,7 +44,12 @@ namespace AdminProgramWithCSharp
             Console.WriteLine("Who do you want to remove?");
              _UserList.RemoveAll(user => user.Name == Console.ReadLine());
             
+        }
 
+        public void editFunction()
+        {
+
+           
         }
     }
 }
