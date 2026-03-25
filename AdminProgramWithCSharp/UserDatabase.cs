@@ -41,15 +41,18 @@ namespace AdminProgramWithCSharp
             /*
             Easiest way to remove from list by element's property value:
             */
-            Console.WriteLine("Who do you want to remove?");
+            Console.WriteLine("Who are the people you want to remove?");
              _UserList.RemoveAll(user => user.Name == Console.ReadLine());
             
         }
 
         public void editFunction()
         {
+            Console.WriteLine("Who are the people you want to edit? Than continue to press enter.");
+            _UserList.RemoveAll(user => user.Name == Console.ReadLine());
+            _UserList.Add(new UserClass("name", "email",/* age */ 0, /* phonenumber */ 0, "HouseAdress"));
 
-           
+
         }
     }
 }

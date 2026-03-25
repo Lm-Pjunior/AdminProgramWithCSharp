@@ -25,7 +25,7 @@ namespace AdminProgramWithCSharp
 
             while (on)
             {
-                Console.WriteLine("Would you like to 'create', 'remove', 'show' or 'shutdown'?");
+                Console.WriteLine("Would you like to 'create', 'remove', 'edit', 'show' or 'shutdown'?");
                 insideSystem = Console.ReadLine();
                 if(insideSystem == "create") 
                 {
@@ -40,6 +40,10 @@ namespace AdminProgramWithCSharp
                 {
                     User.removeUserOflist();
                     Console.Clear();
+                }
+                if(insideSystem == "edit")
+                {
+                    User.editFunction();
                 }
                 if(insideSystem == "shutdown")
                 {
