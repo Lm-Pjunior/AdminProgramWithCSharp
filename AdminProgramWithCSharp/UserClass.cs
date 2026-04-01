@@ -9,14 +9,13 @@ namespace AdminProgramWithCSharp
 {
     public class UserClass
     {
-        
+        //make sure to implement more name = name because that'll alowe more smoothing out
 
         private string _name;
         private string _email;
         private int _age;
         private int _phonenumber;
         private string _houseAdres;
-
         private int _count;
 
             
@@ -49,47 +48,12 @@ namespace AdminProgramWithCSharp
           //you want to be able to chance it
         public UserClass(string name, string email, int age, int phonenumber, string houseAdres)
         {
-            //make a funcyion for typing stuff down that later be added to tnhe list
-            Console.WriteLine("Write down your name.");
-            _name = Console.ReadLine();
-           
-            bool repeat = true;
-            while (repeat) 
-            {
-                Console.WriteLine("Type down your age, it has to be a number");
-                bool intCheck = int.TryParse(Console.ReadLine(), out _age);
-                if (intCheck)
-                {
-                    repeat = false;
-                }
-            }
-            bool repeat2 = true;
-            while (repeat2)
-            {
-                Console.WriteLine("Write your email down it must contain a @.");
-                _email = Console.ReadLine();
-                if (_email.Contains("@"))
-                {
-                    repeat2 = false;
-                }
-
-            }
-
-            bool repeat3 = true;
-
-            while (repeat3)
-            {
-                Console.WriteLine("Write down your phonenumber it must be numbers.");
-                bool intCheck2 = int.TryParse(Console.ReadLine(), out _phonenumber);
-                if (intCheck2)
-                {
-                    repeat3 = false;
-                }
-            }
             
-            Console.WriteLine("Write down you house adress.");
-            _houseAdres = Console.ReadLine();
-
+            _name = name;
+            _email = email;
+            _age = age;
+            _phonenumber = phonenumber;
+            _houseAdres = houseAdres;
             
         }
 

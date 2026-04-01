@@ -15,7 +15,7 @@ namespace AdminProgramWithCSharp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, this is the first bit of code");
-            UserDatabase User = new UserDatabase();
+            UserDatabase user = new UserDatabase();
            // User.nameCharacter();
             
 
@@ -29,26 +29,27 @@ namespace AdminProgramWithCSharp
                 insideSystem = Console.ReadLine();
                 if(insideSystem == "create") 
                 {
-                    User.addUserToList();
+                    user.addUserToList();
                     Console.Clear();
                 }
                 if(insideSystem == "show")
                 {
-                    User.show();
+                    user.show();
                 }
                 if (insideSystem == "remove")
                 {
-                    User.removeUserOflist();
+                    user.removeUserOflist();
                     Console.Clear();
                 }
                 if(insideSystem == "edit")
                 {
-                    User.editFunction();
+                    user.editFunction();
                 }
                 if(insideSystem == "shutdown")
                 {
                     on = false;
                 }
+                
 
             }
         }
