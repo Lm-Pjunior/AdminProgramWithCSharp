@@ -85,7 +85,7 @@ namespace AdminProgramWithCSharp
 
 
             _UserList.Add(new UserClass(_name,_email,_age,_phonenumber, _houseAdress));
-            foreach (var /* int & string */ user in _UserList)
+            foreach (UserClass user in _UserList)
             {
                 user.userCount();
             }
@@ -93,7 +93,7 @@ namespace AdminProgramWithCSharp
 
         public void show()
         {
-            foreach (var /* int & string */ user in _UserList)
+            foreach (UserClass /* int & string */ user in _UserList)
             {
 
                 
@@ -106,9 +106,7 @@ namespace AdminProgramWithCSharp
         {
         
             string removal = Console.ReadLine();
-            /*
-            Easiest way to remove from list by element's property value:
-            */
+          
 
             Console.WriteLine("Who are the people you want to remove?");
              _UserList.RemoveAll(user => user.Name == removal);
